@@ -1,8 +1,8 @@
-/* CSS by Christina Carrasquilla, iteration by */
+/* CSS by Christina Carrasquilla, iteration by Anna Cameron */
 
 /* ===== Color Palette ===== 
 
-    backgound: #0f172a;
+    background: #0f172a;
     nav-footer: #020617;
     card: #1e293b;
     text-main: #e2e8f0;
@@ -12,12 +12,14 @@
 */
 
 /* ===== GLOBAL (Base) Styles ===== */
+
+/* removed min-width:500px; from body to prevent horizontal scrolling */
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    min-width:500px;
     display:grid;
     grid-template-columns:1fr;
 }
@@ -109,3 +111,28 @@ footer {
 /* target the nav and display it flex, spaceed around */
 /* target the .card-row to display flex */
 /* target the sections in .card-row witha width for 30% */
+
+@media screen and (min-width: 800px) {
+     
+    body {
+        grid-template-columns: 1fr 300px;
+    }
+    
+    header, nav, footer {
+        grid-column: 1/-1;
+     }
+
+     nav ul {
+        display: flex;
+        justify-content: space-around;
+     }
+
+     .card-row {
+        display: flex;
+        gap: 1rem;
+     }
+
+     .card-row section {
+        width: 30%;
+     }
+}

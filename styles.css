@@ -13,15 +13,12 @@
 
 /* ===== GLOBAL (Base) Styles ===== */
 
-/* removed min-width:500px; from body to prevent horizontal scrolling */
-
 body {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
     display:grid;
-    
     grid-template-columns:1fr;
 }
 
